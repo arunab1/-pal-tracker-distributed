@@ -11,7 +11,7 @@ applications:
     SPRING_SECURITY_USER_PASSWORD: operations4red
     SPRING_SECURITY_USER_ROLES: ACTUATOR
   services:
-  - tracker-allocations-database
+  - tracker-backlog-database
   - tracker-service-registry
   - tracker-circuit-breaker-dashboard
   - tracker-sso

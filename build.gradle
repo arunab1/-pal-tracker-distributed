@@ -4,8 +4,9 @@ buildscript {
     ext {
         springBootVersion = "2.0.6.RELEASE"
         springVersion = "5.0.9.RELEASE"
+        springCloudCommonsVersion = "2.0.0.RELEASE"
         springCloudServicesClientLibrariesVersion = "2.0.2.RELEASE"
-        springCloudVersion = "Finchley.RELEASE"
+        springCloudVersion = "Finchley.SR3"
         mysqlVersion = "8.0.13"
         jacksonVersion = "2.9.7"
         slf4jVersion = "1.7.25"

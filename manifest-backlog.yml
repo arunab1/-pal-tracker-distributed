@@ -5,7 +5,13 @@ applications:
   - route: backlog-pal-march-batch.apps.evans.pal.pivotal.io
   memory: 1G
   instances: 1
+  env:
+    GRANT_TYPE: client_credentials
+    SPRING_SECURITY_USER_NAME: actuator
+    SPRING_SECURITY_USER_PASSWORD: operations4red
+    SPRING_SECURITY_USER_ROLES: ACTUATOR
   services:
-  - tracker-backlog-database
+  - tracker-allocations-database
   - tracker-service-registry
   - tracker-circuit-breaker-dashboard
+  - tracker-sso

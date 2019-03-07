@@ -19,6 +19,7 @@ dependencies {
     compile "io.pivotal.spring.cloud:spring-cloud-services-starter-service-registry"
     compile "org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:$springSecurityOAuthAutoconfigVersion"
     compile "io.pivotal.spring.cloud:spring-cloud-sso-connector:$springCloudSsoVersion"
+    compile "io.pivotal.spring.cloud:spring-cloud-services-starter-config-client"
 
     testCompile project(":components:test-support")
 }
@@ -29,5 +30,10 @@ bootRun.environment([
         "SECURITY_OAUTH2_CLIENT_CLIENT_SECRET": "supersecret",
         "SPRING_SECURITY_USER_NAME": "actuator",
         "SPRING_SECURITY_USER_PASSWORD": "operations4red",
-        "SPRING_SECURITY_USER_ROLES": "ACTUATOR"
+        "SPRING_SECURITY_USER_ROLES": "ACTUATOR",
+        "REGISTRATION_SERVER_ENDPOINT": "http://registration-server"
+])
+
+test.environment([
+        "REGISTRATION_SERVER_ENDPOINT": "http://registration-server"
 ])

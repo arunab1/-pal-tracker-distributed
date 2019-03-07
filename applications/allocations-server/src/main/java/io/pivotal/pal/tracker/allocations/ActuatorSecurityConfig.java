@@ -1,4 +1,4 @@
-package io.pivotal.pal.tracker.registration;
+package io.pivotal.pal.tracker.allocations;
 
 
 import org.springframework.boot.actuate.autoconfigure.security.servlet.EndpointRequest;
@@ -16,7 +16,7 @@ public class ActuatorSecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .requestMatcher(EndpointRequest.toAnyEndpoint())
                 .authorizeRequests()
-                .requestMatchers(EndpointRequest.to("info")).permitAll()
+                .requestMatchers(EndpointRequest.toAnyEndpoint()).permitAll()
                 .anyRequest().hasRole("ACTUATOR") // Any other endpoint
                 .and()
                 .httpBasic();
